@@ -10,20 +10,20 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://noflattire.com"),
-  title: "NO FLAT | Tire Protection Sealant",
+  title: "NO FLAT | Professional Tire Sealant",
   description:
-    "Professional-grade tire sealant for passenger, fleet, and government vehicles. Instant puncture sealing, extended tire life, fuel efficiency.",
+    "Water-based tire sealant for fleets, government agencies, and professional operators. Continuous puncture protection from Alba Imports LLC.",
   keywords: [
     "tire sealant",
-    "flat tire prevention",
     "fleet tire protection",
     "government fleet",
-    "tire protection",
+    "TPMS compatible sealant",
+    "professional tire protection",
   ],
   openGraph: {
-    title: "NO FLAT | Tire Protection Sealant",
+    title: "NO FLAT | Professional Tire Sealant",
     description:
-      "Professional-grade tire sealant for passenger, fleet, and government vehicles.",
+      "Water-based tire sealant for fleets, government agencies, and professional operators.",
     type: "website",
     images: ["/logo_fundo_transparente.png"],
   },

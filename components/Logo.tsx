@@ -8,7 +8,7 @@ type LogoProps = {
 export default function Logo({ variant = "header" }: LogoProps) {
   if (variant === "header") {
     return (
-      <Link href="#" className="inline-flex shrink-0 items-center">
+      <Link href="/" className="inline-flex shrink-0 items-center">
         <Image
           src="/logo_fundo_transparente.png"
           alt="NO FLAT Tire Protection"

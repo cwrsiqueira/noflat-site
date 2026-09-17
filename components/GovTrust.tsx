@@ -1,56 +1,137 @@
-import Image from "next/image";
-
-const stats = [
-  { value: "6mm", label: "Max puncture seal (passenger)" },
-  { value: "20%", label: "Longer tire life" },
-  { value: "3%", label: "Potential fuel savings" },
+const credentials = [
+  { label: "Distributed by", value: "Alba Imports LLC" },
+  { label: "Status", value: "SAM.gov Registered" },
+  { label: "CAGE / NCAGE", value: "21H26" },
+  { label: "UEI", value: "MPCSSU99PPS9" },
 ];
 
-const bullets = [
-  "Reduced vehicle downtime and roadside emergencies",
-  "Operational continuity for mission-critical fleets",
-  "Predictable maintenance costs and fewer tire replacements",
-  "Enhanced safety for drivers, passengers, and the public",
+const markets = [
+  "Police Departments",
+  "Fire Departments",
+  "Public Works",
+  "School Districts",
+  "Transit Agencies",
+  "Municipal Fleets",
+  "Bulk Procurement",
+];
+
+const packaging = [
+  { name: "5.3 Gallon Pail", status: "Available" },
+  { name: "55 Gallon Drum", status: "Coming Soon" },
+  { name: "275 Gallon IBC Tote", status: "Coming Soon" },
 ];
 
 export default function GovTrust() {
   return (
-    <section className="relative flex min-h-[80vh] items-center md:min-h-screen">
-      <Image
-        src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1920&q=80"
-        alt="City street with fleet vehicles"
-        fill
-        className="object-cover"
-        sizes="100vw"
-      />
-      <div className="absolute inset-0 bg-black/55" />
+    <section id="government" className="bg-neutral py-20 md:py-32">
+      <div className="section-padding mx-auto max-w-7xl">
+        <div className="mb-12 max-w-3xl md:mb-16">
+          <p className="text-label text-secondary mb-4">Government</p>
+          <h2 className="text-h1 mb-4">Procurement Ready Tire Protection</h2>
+          <p className="text-secondary">
+            NoFlat supports federal, state, and local agencies with professional tire
+            protection solutions, procurement documentation, and responsive support for
+            fleet operations.
+          </p>
+        </div>
 
-      <div className="section-padding relative z-10 mx-auto w-full max-w-7xl py-32">
-        <p className="text-label mb-4 text-white/80">Government & Fleet</p>
-        <h2 className="text-display max-w-2xl text-white">
-          Built for Mission-Critical Fleets
-        </h2>
-        <p className="mt-6 max-w-xl text-white/90">
-          When every minute off the road matters, NO FLAT delivers the reliability
-          government agencies and fleet operators need to stay operational.
-        </p>
+        <div className="mb-16">
+          <h3 className="text-h1 mb-6 text-lg">Trusted Government Supplier</h3>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {credentials.map((item) => (
+              <div key={item.label} className="card border border-secondary/20">
+                <p className="text-label text-secondary mb-2">{item.label}</p>
+                <p className="font-medium text-primary">{item.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
 
-        <ul className="mt-8 max-w-xl space-y-3">
-          {bullets.map((item) => (
-            <li key={item} className="flex items-start gap-3 text-white/90">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white" />
-              {item}
-            </li>
-          ))}
-        </ul>
+        <div className="mb-16">
+          <h3 className="text-h1 mb-3 text-lg">Procurement Documentation</h3>
+          <p className="mb-6 max-w-2xl text-secondary">
+            Professional documentation prepared to support public-sector purchasing and
+            procurement requirements.
+          </p>
+          <div className="grid gap-6 md:grid-cols-2">
+            <article className="card border border-secondary/20">
+              <h4 className="mb-2 text-lg font-medium">Capability Statement</h4>
+              <p className="mb-4 text-sm text-secondary">
+                Company overview, capabilities, and procurement readiness.
+              </p>
+              <span className="text-label text-secondary">Coming Soon</span>
+            </article>
+            <article className="card border border-secondary/20">
+              <h4 className="mb-2 text-lg font-medium">Product Brochure</h4>
+              <p className="mb-4 text-sm text-secondary">
+                Product technology, applications, packaging, and benefits.
+              </p>
+              <span className="text-label text-secondary">Coming Soon</span>
+            </article>
+          </div>
+        </div>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-3">
-          {stats.map((stat) => (
-            <div key={stat.label}>
-              <p className="text-display text-white">{stat.value}</p>
-              <p className="text-label mt-2 text-white/70">{stat.label}</p>
-            </div>
-          ))}
+        <div className="mb-16">
+          <h3 className="text-h1 mb-6 text-lg">Technical Documents</h3>
+          <div className="grid gap-6 md:grid-cols-2">
+            <article className="card border border-secondary/20">
+              <h4 className="mb-2 text-lg font-medium">Technical Data Sheet (TDS)</h4>
+              <p className="mb-4 text-sm text-secondary">
+                Technical specifications and performance information.
+              </p>
+              <span className="text-label text-secondary">Coming Soon</span>
+            </article>
+            <article className="card border border-secondary/20">
+              <h4 className="mb-2 text-lg font-medium">Safety Data Sheet (SDS)</h4>
+              <p className="mb-4 text-sm text-secondary">
+                Safety, handling, storage, transportation, and regulatory information.
+              </p>
+              <span className="text-label text-secondary">Available Upon Request</span>
+            </article>
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <h3 className="text-h1 mb-3 text-lg">Government Markets</h3>
+          <p className="mb-6 max-w-2xl text-secondary">
+            Professional packaging solutions designed to support agencies and fleet
+            operations of every size.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {markets.map((market) => (
+              <div
+                key={market}
+                className="border border-secondary/20 bg-surface px-5 py-4 text-primary"
+              >
+                {market}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <h3 className="text-h1 mb-6 text-lg">Available Packaging</h3>
+          <ul className="space-y-3">
+            {packaging.map((item) => (
+              <li key={item.name} className="flex items-center gap-3 text-secondary">
+                <span className="h-1.5 w-1.5 rounded-full bg-tertiary" />
+                <span className="text-primary">{item.name}</span>
+                <span className="text-label text-secondary">({item.status})</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="border border-secondary/20 bg-surface p-8 md:p-10">
+          <h3 className="text-h1 mb-3 text-lg">Need Procurement Assistance?</h3>
+          <p className="mb-6 max-w-2xl text-secondary">
+            Whether you&apos;re requesting technical documentation, product information, or
+            a government quotation, our Government Sales Team is ready to assist throughout
+            the purchasing process.
+          </p>
+          <a href="#contact" className="btn-primary">
+            Contact Government Sales
+          </a>
         </div>
       </div>
     </section>

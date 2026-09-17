@@ -6,24 +6,18 @@ export default function About() {
       <div className="section-padding mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <div>
           <p className="text-label text-secondary mb-4">Technology</p>
-          <h2 className="text-h1 mb-6">Engineered to Keep You Moving</h2>
+          <h2 className="text-h1 mb-6">Advanced Protection. Simple Performance.</h2>
           <div className="space-y-4 text-secondary">
             <p>
-              NO FLAT is a high-performance liquid sealant formulated with rubber
-              powder and eco-conscious components. Applied inside the tire, it creates
-              a protective layer across the inner tread — sealing punctures the moment
-              they occur.
+              NoFlat is an advanced water-based tire sealant designed to provide continuous
+              puncture protection from the inside out. The formula remains inside the tire,
+              automatically sealing punctures as they occur to help maintain tire pressure
+              and keep vehicles moving.
             </p>
             <p>
-              Born to eliminate the unexpected, our technology works preventively and
-              correctively. Whether you are commuting, managing a fleet, or operating
-              mission-critical vehicles, NO FLAT delivers the continuity your
-              operation demands.
-            </p>
-            <p>
-              Non-toxic, biodegradable, and compatible with TPMS sensors, our formula
-              is designed for every tire type — from passenger cars and motorcycles to
-              commercial trucks, buses, and heavy equipment.
+              Designed for passenger vehicles, commercial fleets, trailers, and heavy-duty
+              equipment, NoFlat helps reduce downtime, lower maintenance costs, and keep
+              operations running with confidence.
             </p>
           </div>
         </div>

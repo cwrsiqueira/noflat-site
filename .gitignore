@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local reference assets (not for deploy)
+docs/screencapture*
+docs/_slices/

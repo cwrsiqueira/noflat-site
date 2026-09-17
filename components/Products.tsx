@@ -2,28 +2,28 @@ import Image from "next/image";
 
 const products = [
   {
-    name: "Passenger Sealant",
-    volume: "700ml – 1.2L",
-    application: "Cars, SUVs, crossovers",
-    details: "Available in 4-pack kits for complete vehicle coverage.",
-    image:
-      "https://images.unsplash.com/photo-1632823471565-1ecdf7230f91?auto=format&fit=crop&w=600&q=80",
+    name: "5.3 Gallon Pail",
+    status: "Available Now",
+    available: true,
+    description:
+      "Maximum flexibility. Easy to transport, store, and handle for everyday professional use.",
+    image: "/images/products/pail.jpg",
   },
   {
-    name: "Motorcycle Sealant",
-    volume: "400ml – 800ml",
-    application: "Motorcycles, ATVs, scooters",
-    details: "Single-application pouches sized for two-wheel vehicles.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80",
+    name: "55 Gallon Drum",
+    status: "Coming Soon",
+    available: false,
+    description:
+      "Greater efficiency. Reduces refill frequency while supporting higher-volume operations.",
+    image: "/images/products/drum.jpg",
   },
   {
-    name: "Commercial Sealant",
-    volume: "900ml – 1.2L",
-    application: "Trucks, buses, fleet vehicles",
-    details: "Heavy-duty formula for commercial and municipal fleets.",
-    image:
-      "https://images.unsplash.com/photo-1601584115197-04ec0cdc265c?auto=format&fit=crop&w=600&q=80",
+    name: "275 Gallon IBC Tote",
+    status: "Coming Soon",
+    available: false,
+    description:
+      "Bulk productivity. Optimized for large-scale storage, dispensing, and distribution.",
+    image: "/images/products/ibc.jpg",
   },
 ];
 
@@ -32,39 +32,40 @@ export default function Products() {
     <section id="products" className="bg-neutral py-20 md:py-32">
       <div className="section-padding mx-auto max-w-7xl">
         <div className="mb-12 max-w-2xl md:mb-16">
-          <p className="text-label text-secondary mb-4">Product Line</p>
-          <h2 className="text-h1">Solutions for Every Vehicle</h2>
+          <p className="text-label text-secondary mb-4">Products</p>
+          <h2 className="text-h1">Packaging Solutions</h2>
           <p className="mt-4 text-secondary">
-            Professional-grade sealant formulations tailored to your fleet — contact us
-            for volume pricing and distribution inquiries.
+            NoFlat is currently available in professional packaging designed for commercial
+            use, with larger bulk options under development to support fleets, distributors,
+            and industrial operations.
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
           {products.map((product) => (
-            <article key={product.name} className="card overflow-hidden border border-secondary/20 p-0">
-              <div className="relative aspect-[16/10]">
+            <article
+              key={product.name}
+              className="card overflow-hidden border border-secondary/20 p-0"
+            >
+              <div className="relative aspect-square bg-surface">
                 <Image
                   src={product.image}
                   alt={product.name}
                   fill
-                  className="object-cover"
+                  className="object-contain p-6"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-h1 mb-2 text-lg">{product.name}</h3>
-                <dl className="mb-4 space-y-2 text-sm text-secondary">
-                  <div>
-                    <dt className="text-label inline text-secondary">Volume</dt>
-                    <dd className="mt-1">{product.volume}</dd>
-                  </div>
-                  <div>
-                    <dt className="text-label inline text-secondary">Application</dt>
-                    <dd className="mt-1">{product.application}</dd>
-                  </div>
-                </dl>
-                <p className="mb-6 text-sm text-secondary">{product.details}</p>
+                <p
+                  className={`text-label mb-2 ${
+                    product.available ? "text-tertiary" : "text-secondary"
+                  }`}
+                >
+                  {product.status}
+                </p>
+                <h3 className="text-h1 mb-3 text-lg">{product.name}</h3>
+                <p className="mb-6 text-sm text-secondary">{product.description}</p>
                 <a href="#contact" className="btn-outline">
                   Learn More
                 </a>
